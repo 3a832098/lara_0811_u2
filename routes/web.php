@@ -39,4 +39,8 @@ Route::get('r2', function () {
     {
         return 'Hello, '.$name;
     });
+
+    Route::get('hello/{test1}', function ($name) {
+        return 'Hello, ' . $name;
+    });
 ?>
