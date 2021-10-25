@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 //練習1
-Route::get('/', function () { //設定Route回傳View
+/*Route::get('/', function () { //設定Route回傳View
     return view('welcome');
 });
 Route::get('/', function () { //設定Route回傳字串
@@ -30,7 +30,13 @@ Route::get('r1', function () { //設定Route跳轉路由
 
 Route::get('r2', function () {
     return view('welcome123');
-});
-
-
+});*/
+//練習2之一：設定Route接受參數
+    Route::get('hello/{name}', function ($name) {
+        return 'Hello, ' . $name;
+    });
+    Route::get('hello/{name?}', function($name = 'Everybody')
+    {
+        return 'Hello, '.$name;
+    });
 ?>
