@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-});*/
+});
 //練習1
 /*Route::get('/', function () { //設定Route回傳View
     return view('welcome');
@@ -23,8 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () { //設定Route回傳字串
     return 'welcome';
 });
-
-Route::get('r1', function () { //設定Route跳轉路由
+*/
+/*Route::get('r1', function () { //設定Route跳轉路由
     return redirect('r2');
 });
 
@@ -32,15 +32,22 @@ Route::get('r2', function () {
     return view('welcome123');
 });*/
 //練習2之一：設定Route接受參數
-    Route::get('hello/{name}', function ($name) {
-        return 'Hello, ' . $name;
-    });
-    Route::get('hello/{name?}', function($name = 'Everybody')
-    {
-        return 'Hello, '.$name;
-    });
+/*Route::get('hello/{name}', function ($name) {
+       return 'Hello, ' . $name;
+   });*/
+  /* Route::get('hello/{name?}', function($name = 'Everybody')
+   {
+       return 'Hello, '.$name;
+   });*/
+//練習三：新增路由
+/*Route::get('hello/{name}', function ($name) {
+       return 'Hello, ' . $name;
+   });*/
+//練習四 命名ROUTE
+     Route::get('hello/{name?}', function($name= 'Everybody')
+        {
+                return'Hello, ' .$name;
+        }
+        ) -> name('hello.index');
 
-    Route::get('hello/{test1}', function ($name) {
-        return 'Hello, ' . $name;
-    });
 ?>
