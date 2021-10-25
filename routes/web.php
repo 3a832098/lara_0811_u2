@@ -44,10 +44,19 @@ Route::get('r2', function () {
        return 'Hello, ' . $name;
    });*/
 //練習四 命名ROUTE
-     Route::get('hello/{name?}', function($name= 'Everybody')
+ /*    Route::get('hello/{name?}', function($name= 'Everybody')
         {
                 return'Hello, ' .$name;
         }
-        ) -> name('hello.index');
+     ) -> name('hello.index');*/
+//練習五 設定ROUTE的前置
+    Route::get('dashboard', function(){
+        return 'dashboard';
+    });
+    Route::group(['prefix'=>'admin'], function(){
+        Route::get('dashboard', function(){
+            return 'admin dashboard';
+        });
+    });
 
 ?>
