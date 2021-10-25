@@ -50,13 +50,14 @@ Route::get('r2', function () {
         }
      ) -> name('hello.index');*/
 //練習五 設定ROUTE的前置
-    Route::get('dashboard', function(){
+    /*Route::get('dashboard', function(){
         return 'dashboard';
     });
     Route::group(['prefix'=>'admin'], function(){
         Route::get('dashboard', function(){
             return 'admin dashboard';
         });
-    });
+    });*/
+//練習七
 
 ?>

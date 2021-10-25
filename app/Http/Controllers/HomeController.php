@@ -6,5 +6,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    //
+    //練習七 7-1
+    public function index()
+    {
+        return 'index';
+    }
 }
