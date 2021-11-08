@@ -32,23 +32,23 @@ Route::get('r2', function () {
     return view('welcome123');
 });*/
 //練習2之一：設定Route接受參數
-/*Route::get('hello/{name}', function ($name) {
+Route::get('hello/{name}', function ($name) {
        return 'Hello, ' . $name;
-   });*/
+   });
   /* Route::get('hello/{name?}', function($name = 'Everybody')
    {
        return 'Hello, '.$name;
    });*/
 //練習三：新增路由
-Route::get('hello/{name}', function ($name) {
+/*Route::get('hello/{name}', function ($name) {
        return 'Hello, ' . $name;
-   });
+   });*/
 //練習四 命名ROUTE
-     Route::get('hello/{name?}', function($name= 'Everybody')
+ /*    Route::get('hello/{name?}', function($name= 'Everybody')
         {
                 return'Hello, ' .$name;
         }
-     ) -> name('hello.index');
+     ) -> name('hello.index');*/
 //練習五 設定ROUTE的前置
     /*Route::get('dashboard', function(){
         return 'dashboard';
@@ -59,8 +59,8 @@ Route::get('hello/{name}', function ($name) {
         });
     });*/
 //練習七 7-2
-    use App\Http\Controllers\HomeController;
-    Route::get('home',[HomeController::class,'index'])-> name('home.index');
+ /*   use App\Http\Controllers\HomeController;
+    Route::get('home',[HomeController::class,'index'])-> name('home.index');*/
 
 
 ?>
